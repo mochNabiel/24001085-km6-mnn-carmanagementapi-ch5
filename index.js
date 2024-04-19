@@ -1,18 +1,18 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
-const path = require("path");
 const router = require("./routes");
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Set view engine
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-
 // Middleware
 app.use(express.json());
-app.use(fileUpload({ useTempFiles: true }));
+app.use(
+  fileUpload({
+      useTempFiles: true,
+      tempFileDir: process.env.NODE_ENV == "development" ? "./tmp" : "/tmp", // if you're using GCP App Engine please don't comment this, because the ./tmp directory is read only and we need write too so we use /tmp
+  })
+); // body -> form-data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 

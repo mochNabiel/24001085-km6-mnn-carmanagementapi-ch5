@@ -1,2 +1,6 @@
 runtime: nodejs20
-service: mochammad-nabiel-chapter-5
+service: nabiel-challenge-5
+
+predeploy:
+  - npm install
+  - npx sequelize db:migrate
