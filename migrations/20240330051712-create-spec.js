@@ -9,14 +9,6 @@ module.exports = {
         autoIncrement: true,
         type: Sequelize.INTEGER,
       },
-      carId: {
-        type: Sequelize.UUID,
-        allowNull: false,
-        references: {
-          model: "Cars",
-          key: "id",
-        },
-      },
       spec: {
         type: Sequelize.TEXT,
         allowNull: false,
