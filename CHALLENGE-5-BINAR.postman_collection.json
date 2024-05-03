@@ -15,12 +15,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/car",
-							"protocol": "http",
+							"raw": "{{URL}}/api/car",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"car"
@@ -35,12 +33,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/car/id/edb27c5a-e873-4354-a1b6-c4f0b3bdf0e8",
-							"protocol": "http",
+							"raw": "{{URL}}/api/car/id/edb27c5a-e873-4354-a1b6-c4f0b3bdf0e8",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"car",
@@ -57,12 +53,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/car/capacity/2",
-							"protocol": "http",
+							"raw": "{{URL}}/api/car/capacity/2",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"car",
@@ -144,12 +138,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/car",
-							"protocol": "http",
+							"raw": "{{URL}}/api/car",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"car"
@@ -229,12 +221,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/car/id/583fcc6c-c162-4506-bd5b-4e312a734d32",
-							"protocol": "http",
+							"raw": "{{URL}}/api/car/id/583fcc6c-c162-4506-bd5b-4e312a734d32",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"car",
@@ -251,12 +241,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/car/id/cdd39816-5508-4170-ba9b-b1d6d6fa4d13",
-							"protocol": "http",
+							"raw": "{{URL}}/api/car/id/cdd39816-5508-4170-ba9b-b1d6d6fa4d13",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"car",
@@ -278,12 +266,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/option",
-							"protocol": "http",
+							"raw": "{{URL}}/api/option",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"option"
@@ -298,12 +284,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/option/2",
-							"protocol": "http",
+							"raw": "{{URL}}/api/option/2",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"option",
@@ -334,12 +318,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/option",
-							"protocol": "http",
+							"raw": "{{URL}}/api/option",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"option"
@@ -364,12 +346,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/option/1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/option/1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"option",
@@ -385,12 +365,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/option/1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/option/1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"option",
@@ -411,12 +389,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/spec",
-							"protocol": "http",
+							"raw": "{{URL}}/api/spec",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"spec"
@@ -431,12 +407,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/spec/2",
-							"protocol": "http",
+							"raw": "{{URL}}/api/spec/2",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"spec",
@@ -467,12 +441,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/spec",
-							"protocol": "http",
+							"raw": "{{URL}}/api/spec",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"spec"
@@ -497,12 +469,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/spec/1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/spec/1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"spec",
@@ -518,12 +488,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/spec/1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/spec/1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"spec",
@@ -548,14 +516,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE0NzIyMjEwLCJleHAiOjE3MTQ3MjU4MTB9.bzGEYfeUzi-XqmWbpYaOu8EUeXzNt-YNC9yWWr-G4kg",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -632,17 +593,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "akun user",
+											"value": "Akun User",
 											"type": "text"
 										},
 										{
 											"key": "email",
-											"value": "test.user@gmail.com",
+											"value": "mochnabiel.user@gmail.com",
 											"type": "text"
 										},
 										{
 											"key": "password",
-											"value": "user123",
+											"value": "7863",
 											"type": "text"
 										}
 									]
@@ -673,14 +634,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzE0NzI0MTAyLCJleHAiOjE3MTQ3Mjc3MDJ9.0rjqVG3hUz7_6Jq7svc-yPA0cUtLo7r0P4eZBB0ZR_g",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -767,17 +721,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "akun admin",
+											"value": "Akun Admin",
 											"type": "text"
 										},
 										{
 											"key": "email",
-											"value": "test.admin@gmail.com",
+											"value": "mochnabiel.admin@gmail.com",
 											"type": "text"
 										},
 										{
 											"key": "password",
-											"value": "admin123",
+											"value": "7863",
 											"type": "text"
 										}
 									]
@@ -808,14 +762,7 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE0NzIzOTE0LCJleHAiOjE3MTQ3Mjc1MTR9.NRb4puxrbruSDY3U9Pm3JCCL-QZaKxN7GeNQ62t8v24",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -892,17 +839,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "akun super admin",
+											"value": "Akun Super Admin",
 											"type": "text"
 										},
 										{
 											"key": "email",
-											"value": "test.superadmin@gmail.com",
+											"value": "mochnabiel.superadmin@gmail.com",
 											"type": "text"
 										},
 										{
 											"key": "password",
-											"value": "superadmin123",
+											"value": "7863",
 											"type": "text"
 										}
 									]
