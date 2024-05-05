@@ -1,9 +1,13 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
+const cors = require("cors");
 const router = require("./routes");
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Enable CORS
+app.use(cors());
 
 // Middleware
 app.use(express.json());
