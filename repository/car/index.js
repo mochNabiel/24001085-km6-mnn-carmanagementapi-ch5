@@ -86,8 +86,6 @@ exports.createCar = async (payload) => {
     // Process to upload image
     const imageUpload = await uploader(image);
     payload.image = imageUpload.secure_url;
-  } else {
-    payload.image = null;
   }
 
   // save to db
@@ -119,8 +117,6 @@ exports.updateCar = async (id, payload) => {
     // Process to upload image
     const imageUpload = await uploader(image);
     payload.image = imageUpload.secure_url;
-  } else {
-    payload.image = null;
   }
 
   // update to postgres

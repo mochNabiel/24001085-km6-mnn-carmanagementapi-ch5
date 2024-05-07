@@ -138,11 +138,13 @@ exports.createCar = async (req, res, next) => {
     checkCarInput(req, res);
     const id = uuid();
     const image = req?.files?.image;
-    const car = await carUsecase.createCar({
+
+    const carPayload = {
       id,
       ...req.body,
-      image,
-    });
+      image: image ? image : null,
+    };
+    const car = await carUsecase.createCar(carPayload);
     res.status(201).json({
       message: "Success to create car",
       data: car,
@@ -158,7 +160,13 @@ exports.updateCar = async (req, res, next) => {
     const { id } = req.params;
     const image = req?.files?.image;
 
-    const car = await carUsecase.updateCar(id, req.body, image);
+    const carPayload = {
+      id,
+      ...req.body,
+      image: image ? image : null,
+    };
+
+    const car = await carUsecase.updateCar(carPayload);
     res.status(200).json({
       message: `Success to update car with id ${id}`,
       data: car,
