@@ -75,7 +75,7 @@ exports.getCarByCapacity = async (capacity) => {
 exports.createCar = async (payload) => {
   if (payload.image) {
     // upload image to cloudinary
-    const image = payload.image;
+    const { image } = payload;
 
     // make unique filename -> 213123128uasod9as8djas
     image.publicId = crypto.randomBytes(16).toString("hex");
