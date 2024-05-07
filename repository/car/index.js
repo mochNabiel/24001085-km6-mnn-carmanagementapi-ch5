@@ -75,7 +75,7 @@ exports.getCarByCapacity = async (capacity) => {
 exports.createCar = async (payload) => {
   if (payload.image) {
     // upload image to cloudinary
-    const { image } = payload;
+    const image = payload.image;
 
     // make unique filename -> 213123128uasod9as8djas
     image.publicId = crypto.randomBytes(16).toString("hex");
@@ -86,6 +86,8 @@ exports.createCar = async (payload) => {
     // Process to upload image
     const imageUpload = await uploader(image);
     payload.image = imageUpload.secure_url;
+  } else {
+    payload.image = null;
   }
 
   // save to db
@@ -117,6 +119,8 @@ exports.updateCar = async (id, payload) => {
     // Process to upload image
     const imageUpload = await uploader(image);
     payload.image = imageUpload.secure_url;
+  } else {
+    payload.image = null;
   }
 
   // update to postgres
