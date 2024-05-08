@@ -5,18 +5,8 @@ const { uploader } = require("../../helper/cloudinary");
 const { getData, setData, deleteData } = require("../../helper/redis");
 
 exports.getCars = async () => {
-  let key = `cars:all`;
-
-  // get from redis
-  let data = await getData(key);
-  if (data) {
-    return data;
-  }
   data = await Car.findAll();
-  if (data.length > 0) {
-    // save to redis
-    await setData(key, data, 300);
-  }
+
   return data;
 };
 
@@ -133,6 +123,7 @@ exports.updateCar = async (id, payload) => {
     },
     include: [Option, Spec],
   });
+
   if (data.length > 0) {
     // save to redis
     await setData(key, data[0], 300);
