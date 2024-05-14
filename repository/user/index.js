@@ -22,6 +22,11 @@ exports.createUser = async (payload) => {
 
   if (payload?.picture) {
     const { picture } = payload;
+
+    picture.publicId = crypto.randomBytes(16).toString("hex");
+
+    picture.name = `${picture.publicId}${path.parse(picture.name).ext}`;
+
     const imageUpload = await uploader(picture);
     payload.photo = imageUpload.secure_url;
   }
