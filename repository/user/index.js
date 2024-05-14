@@ -20,6 +20,10 @@ exports.createUser = async (payload) => {
     payload.photo = imageUpload.secure_url;
   }
 
+  if (payload?.picture) {
+    payload.photo = payload?.picture;
+  }
+
   // save to db
   const data = await user.create(payload);
 
@@ -29,6 +33,8 @@ exports.createUser = async (payload) => {
 
   const keyEmail = `user:${data.email}`;
   await setData(keyEmail, data, 300);
+
+  console.log("data db", data);
 
   return data;
 };
@@ -87,6 +93,5 @@ exports.getGoogleAccessTokenData = async (accessToken) => {
   const response = await axios.get(
     `https://www.googleapis.com/oauth2/v3/userinfo?access_token=${accessToken}`
   );
-  console.log(response.data);
   return response.data;
 };

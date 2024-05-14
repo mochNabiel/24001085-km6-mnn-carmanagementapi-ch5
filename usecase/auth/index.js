@@ -71,7 +71,7 @@ exports.googleLogin = async (accessToken) => {
     email: googleData?.email,
     password: "",
     name: googleData?.given_name,
-    photo: googleData?.picture,
+    picture: googleData?.picture,
     role: "admin",
   });
 
