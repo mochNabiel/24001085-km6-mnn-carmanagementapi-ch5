@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { register, login, profile } = require("../controller/authSuperAdmin");
+const { register, login, profile, googleLogin } = require("../controller/authSuperAdmin");
 const { authMiddleware } = require("../middleware/auth");
 
 router.post("/register", register);
