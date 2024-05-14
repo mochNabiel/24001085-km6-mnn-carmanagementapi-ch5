@@ -21,8 +21,7 @@ exports.createUser = async (payload) => {
   }
 
   if (payload?.picture) {
-    const { picture } = payload;
-    payload.photo = picture
+    payload.photo = payload?.picture
   }
 
   // save to db
