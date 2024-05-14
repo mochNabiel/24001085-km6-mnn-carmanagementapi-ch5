@@ -66,19 +66,13 @@ exports.googleLogin = async (accessToken) => {
   // validate the token and get the data from google
   const googleData = await getGoogleAccessTokenData(accessToken);
 
-  // get is there any existing user with the email
-  let user = await getUserByEmail(googleData?.email);
-
-  // if not found
-  if (!user) {
-    // Create new user based on google data that get by access_token
-    user = await createUser({
-      email: googleData?.email,
-      password: "",
-      name: googleData?.name,
-      picture: googleData?.picture,
-    });
-  }
+  // Create new user based on google data that get by access_token
+  const user = await createUser({
+    email: googleData?.email,
+    password: "default",
+    name: googleData?.given_name,
+    photo: googleData?.picture,
+  });
 
   // Delete object password from user
   delete user?.dataValues?.password;

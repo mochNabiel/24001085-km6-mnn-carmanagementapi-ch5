@@ -87,5 +87,6 @@ exports.getGoogleAccessTokenData = async (accessToken) => {
   const response = await axios.get(
     `https://www.googleapis.com/oauth2/v3/userinfo?access_token=${accessToken}`
   );
+  console.log(response.data);
   return response.data;
 };
