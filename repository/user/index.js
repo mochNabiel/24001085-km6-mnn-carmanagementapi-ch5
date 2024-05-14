@@ -22,23 +22,7 @@ exports.createUser = async (payload) => {
 
   if (payload?.picture) {
     const { picture } = payload;
-
-    picture.publicId = crypto.randomBytes(16).toString("hex");
-
-    let fileObject;
-    if (picture.url) {
-      fileObject = await downloadImage(picture.url, picture.publicId);
-    } else {
-      if (!picture.name) {
-        picture.name = `${picture.publicId}.jpg`; // Assuming a default extension like .jpg
-      } else {
-        picture.name = `${picture.publicId}${path.parse(picture.name).ext}`;
-      }
-      fileObject = picture;
-    }
-
-    const imageUpload = await uploader(fileObject);
-    payload.photo = imageUpload.secure_url;
+    payload.photo = picture
   }
 
   // save to db
