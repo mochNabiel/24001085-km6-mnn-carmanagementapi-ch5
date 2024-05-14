@@ -21,8 +21,20 @@ exports.createUser = async (payload) => {
   }
 
   if (payload?.picture) {
-    payload.photo = payload?.picture;
-}
+    const { picture } = payload;
+  
+    picture.publicId = crypto.randomBytes(16).toString("hex");
+  
+    // Check if picture has a name, if not, assign a default name
+    if (!picture.name) {
+      picture.name = `${picture.publicId}.jpg`; // Assuming a default extension like .jpg
+    } else {
+      picture.name = `${picture.publicId}${path.parse(picture.name).ext}`;
+    }
+  
+    const imageUpload = await uploader(picture);
+    payload.photo = imageUpload.secure_url;
+  }
 
   // save to db
   const data = await user.create(payload);
