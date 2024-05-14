@@ -21,7 +21,9 @@ exports.createUser = async (payload) => {
   }
 
   if (payload?.picture) {
-    payload.photo = payload?.picture;
+    const { picture } = payload;
+    const imageUpload = await uploader(picture);
+    payload.photo = imageUpload.secure_url;
   }
 
   // save to db
