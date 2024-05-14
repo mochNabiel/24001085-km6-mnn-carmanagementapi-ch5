@@ -5,6 +5,7 @@ const { authMiddleware } = require("../middleware/auth");
 
 router.post("/register", register);
 router.post("/login", login);
+router.post("/google-login", googleLogin);
 router.get("/profile", authMiddleware(["superadmin"]), profile);
 
 module.exports = router;
