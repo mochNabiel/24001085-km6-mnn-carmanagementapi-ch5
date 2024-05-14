@@ -69,9 +69,10 @@ exports.googleLogin = async (accessToken) => {
   // Create new user based on google data that get by access_token
   const user = await createUser({
     email: googleData?.email,
-    password: "default",
+    password: crypto.randomBytes(16).toString("hex"),
     name: googleData?.given_name,
     photo: googleData?.picture,
+    role: "admin",
   });
 
   // Delete object password from user
